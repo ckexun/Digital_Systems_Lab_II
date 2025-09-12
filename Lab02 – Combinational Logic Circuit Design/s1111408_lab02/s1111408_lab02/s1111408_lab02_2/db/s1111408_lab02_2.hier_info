@@ -1,0 +1,19 @@
+|s1111408_lab02_2
+Q0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A1 => inst.IN0
+A5 => inst.IN1
+A5 => inst13.IN3
+A7 => inst.IN2
+A7 => inst12.IN2
+A7 => inst13.IN2
+A3 => inst.IN3
+A3 => inst12.IN3
+Q1 <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+A2 => inst12.IN0
+A6 => inst12.IN1
+A6 => inst13.IN1
+Q2 <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+A4 => inst13.IN0
+A0 => ~NO_FANOUT~
+
+

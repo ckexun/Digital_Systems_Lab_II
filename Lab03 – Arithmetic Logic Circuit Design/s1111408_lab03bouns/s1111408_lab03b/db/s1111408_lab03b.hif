@@ -1,0 +1,91 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+10
+767
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+4bit
+# storage
+db|s1111408_lab03b.(1).cnf
+db|s1111408_lab03b.(1).cnf
+# case_insensitive
+# source_file
+4bit.bdf
+39c58763f4c73171b594d5452678fd40
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4bit:inst
+4bit:inst9
+}
+# macro_sequence
+
+# end
+# entity
+FA
+# storage
+db|s1111408_lab03b.(2).cnf
+db|s1111408_lab03b.(2).cnf
+# case_insensitive
+# source_file
+fa.bdf
+09cf81a1fe893e55b8f49b747d14a3a
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+4bit:inst|FA:inst
+4bit:inst|FA:inst1
+4bit:inst|FA:inst2
+4bit:inst|FA:inst3
+4bit:inst9|FA:inst
+4bit:inst9|FA:inst1
+4bit:inst9|FA:inst2
+4bit:inst9|FA:inst3
+}
+# macro_sequence
+
+# end
+# entity
+s1111408_lab03b
+# storage
+db|s1111408_lab03b.(0).cnf
+db|s1111408_lab03b.(0).cnf
+# case_insensitive
+# source_file
+s1111408_lab03b.bdf
+4df77a77607be75060caa97b50b5c70
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

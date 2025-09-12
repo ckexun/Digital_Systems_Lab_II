@@ -1,0 +1,28 @@
+|lab08_1
+clrn => tmp[0].ACLR
+clrn => tmp[1].ACLR
+clrn => tmp[2].ACLR
+clrn => tmp[3].ACLR
+clk => tmp[0].CLK
+clk => tmp[1].CLK
+clk => tmp[2].CLK
+clk => tmp[3].CLK
+Ldn => tmp.OUTPUTSELECT
+Ldn => tmp.OUTPUTSELECT
+Ldn => tmp.OUTPUTSELECT
+Ldn => tmp.OUTPUTSELECT
+Sh => tmp.OUTPUTSELECT
+Sh => tmp.OUTPUTSELECT
+Sh => tmp.OUTPUTSELECT
+Sh => tmp.OUTPUTSELECT
+Di => tmp.DATAB
+D3 => tmp.DATAB
+D2 => tmp.DATAB
+D1 => tmp.DATAB
+D0 => tmp.DATAB
+Q3 <= tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+Q2 <= tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+Q1 <= tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+Q0 <= tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

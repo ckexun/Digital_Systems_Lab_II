@@ -1,0 +1,18 @@
+`timescale 1ns/10ps
+module test;
+	reg clk;
+	reg clrn;
+	wire [1:0]Q;
+	
+	lab08_1 DUT(.clk(clk), .clrn(clrn), .Q(Q),);
+				
+initial begin
+		clk <= 0;
+		clrn <= 0;
+	end
+	
+	always #50 clk <= ~ clk;	
+	initial #100 clrn <= 1;	
+	initial #600 clrn <= 0;
+	initial #700 clrn <= 1;
+endmodule 

@@ -1,0 +1,58 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity lab14_G09 is
+    port (
+        clk : in std_logic;
+        btn : in std_logic_vector(2 downto 0);
+        hex0 : out std_logic_vector(7 downto 0);
+        hex1 : out std_logic_vector(7 downto 0)
+    );
+end lab14_G09;
+
+architecture Behavioral of lab14_G09 is
+
+    signal count : integer range 0 to 99 := 0;  -- 7-bit counter for range 0-99
+
+    type segment_array is array (0 to 9) of std_logic_vector(7 downto 0);
+    signal segment_codes : segment_array := (
+		"11000000",  -- 0
+		"11111001",  -- 1
+		"10100100",  -- 2
+		"10110000",  -- 3
+		"10011001",  -- 4
+		"10010010",  -- 5
+		"10000010",  -- 6
+		"11111000",  -- 7
+		"10000000",  -- 8
+		"10010000"   -- 9
+    );
+begin
+
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if btn(2) = '1' and btn(1) = '0' and btn(0) = '0'  then
+                if count = 99 then
+                    count <= 0;  -- 00
+                else
+                    count <= count + 1;
+                end if;
+            elsif btn(1) = '1' and btn(2) = '0' and btn(0) = '0'then
+                if count = 0 then
+                    count <= 99;  -- 99
+                else
+                    count <= count - 1;
+                end if;
+            elsif btn(0) = '1' and btn(1) = '0' and btn(2) = '0'then
+                count <= 0;  -- Reset to 00
+            end if;
+    hex1 <= segment_codes(count / 10);
+    hex0 <= segment_codes(count mod 10);
+        end if;
+
+    end process;
+   
+    
+end Behavioral;

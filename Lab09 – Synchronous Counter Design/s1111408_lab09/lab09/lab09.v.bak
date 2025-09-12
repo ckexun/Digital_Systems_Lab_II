@@ -1,0 +1,13 @@
+module lab09(load,clk,en,clrn,Da,Db,Co,qa,qb);
+input load,clk,en,clrn;
+input [3:0] Da;
+input [2:0] Db;
+output Co;
+output [3:0] qa;
+output [3:0] qb;
+wire counter10Co;
+counter10 inst3(.load(load), .clk(clk), .en(en), .clrn(clrn), 
+				.D(Da), .Co(counter10Co), .Q(qa));
+counter6 inst(.load(load), .clk(clk), .en(counter10Co), .clrn(clrn), 
+		.D(Db), .Co(Co), .Q(qb));
+endmodule 

@@ -1,0 +1,68 @@
+|lab04
+DIN => D_flip_flop:DFF0.DIN
+CLK => D_flip_flop:DFF0.CLK
+CLK => D_flip_flop:DFF1.CLK
+CLK => D_flip_flop:DFF2.CLK
+CLK => D_flip_flop:DFF3.CLK
+CLK => D_flip_flop:DFF4.CLK
+CLK => D_flip_flop:DFF5.CLK
+CLK => D_flip_flop:DFF6.CLK
+CLK => D_flip_flop:DFF7.CLK
+S[0] <= D_flip_flop:DFF0.Q
+S[1] <= D_flip_flop:DFF1.Q
+S[2] <= D_flip_flop:DFF2.Q
+S[3] <= D_flip_flop:DFF3.Q
+S[4] <= D_flip_flop:DFF4.Q
+S[5] <= D_flip_flop:DFF5.Q
+S[6] <= D_flip_flop:DFF6.Q
+S[7] <= D_flip_flop:DFF7.Q
+
+
+|lab04|D_flip_flop:DFF0
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF1
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF2
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF3
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF4
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF5
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF6
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab04|D_flip_flop:DFF7
+DIN => Q_int.DATAIN
+CLK => Q_int.CLK
+Q <= Q_int.DB_MAX_OUTPUT_PORT_TYPE
+
+

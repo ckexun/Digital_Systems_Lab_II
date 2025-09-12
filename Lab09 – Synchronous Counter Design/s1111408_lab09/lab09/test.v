@@ -1,0 +1,26 @@
+`timescale 1ns/10ps
+module test;
+reg load,clk,en,clrn;
+reg [3:0] Da;
+reg [2:0] Db;
+wire Co;
+wire [3:0] qa;
+wire [2:0] qb;
+lab09 DUT (.load(load), .clk(clk), .en(en), .clrn(clrn),
+.Da(Da), .Db(Db), .Co(Co), .qa(qa), .qb(qb));
+
+initial begin
+	load = 1;
+	clk = 0;
+	clrn = 0;
+	en = 1;
+	Da = 4'b0111;
+	Db = 3'b101;
+	end
+	always #25 clk <= ~clk;
+	initial #50 load <= 0;
+	initial #300 en <= 0;
+	initial #400 en <= 1;
+	initial #700 clrn <= 1;
+	initial #800 clrn <= 0;
+endmodule 

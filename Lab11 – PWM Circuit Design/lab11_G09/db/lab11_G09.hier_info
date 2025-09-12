@@ -1,0 +1,19 @@
+|lab11_G09
+clk => led~reg0.CLK
+clk => pwm_out.CLK
+clk => count[0].CLK
+clk => count[1].CLK
+clk => count[2].CLK
+clk => count[3].CLK
+enable => led.OUTPUTSELECT
+enable => pwm_out.ENA
+enable => count[0].ENA
+enable => count[1].ENA
+enable => count[2].ENA
+enable => count[3].ENA
+duty[0] => LessThan0.IN4
+duty[1] => LessThan0.IN3
+duty[2] => LessThan0.IN2
+led <= led~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

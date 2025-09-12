@@ -1,0 +1,35 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\User\Desktop\s1111408_lab07\lab07\simulation\modelsim
+vlab07
+IZ1Be22Aem>AJ8[Ui2FglV0
+VH[J8]]Az1A`b2MHLR]][K3
+w1713979142
+8lab07.vo
+Flab07.vo
+L0 31
+Z1 OV;L;6.5b;42
+r1
+31
+Z2 o-vlog01compat -work work -O0
+!s100 HS;Dd<Qn@lIO_m6m`ZW5N0
+!s85 0
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vtest
+!s100 zYBLT=jzd7?O7URzn3BM@2
+IGca8T@]kiQXVC:7NlSGc;0
+Vk<3<[f=78GX=_HO53D;7>3
+w1713978500
+8C:/Users/User/Desktop/s1111408_lab07/lab07/test.v
+FC:/Users/User/Desktop/s1111408_lab07/lab07/test.v
+L0 3
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+!s92 -vlog01compat -work work +incdir+C:/Users/User/Desktop/s1111408_lab07/lab07 -O0

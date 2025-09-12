@@ -1,0 +1,9 @@
+|lab08_2
+clk => preQ[0].CLK
+clk => preQ[1].CLK
+clrn => preQ[0].ACLR
+clrn => preQ[1].ACLR
+Q[0] <= preQ[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= preQ[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

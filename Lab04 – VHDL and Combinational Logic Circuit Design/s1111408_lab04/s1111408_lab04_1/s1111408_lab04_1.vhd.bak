@@ -1,0 +1,11 @@
+library ieee;
+	use ieee.std_logic_1164.all;
+ENTITY s1111408_lab04_1 IS
+	PORT(A,B,C,D:IN STD_LOGIC;
+	Y:OUT STD_LOGIC);\
+END s1111408_lab04_1;
+
+ARCHITECTURE A OF s1111408_lab04_1 IS
+BEGIN 
+	Y <= (not A and not C) or (not C and not D) or(not B and D)or(A and B and C);
+END A

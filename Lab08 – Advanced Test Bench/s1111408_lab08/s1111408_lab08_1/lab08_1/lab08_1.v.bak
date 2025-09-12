@@ -1,0 +1,45 @@
+module lab08_1 (
+    input clrn, clk, Ldn, Sh, Di, D3, D2, D1, D0,
+    output reg Q3, Q2, Q1, Q0
+);
+
+reg [3:0] tmp;
+
+always @(posedge clk or posedge clrn) begin
+    if (clrn) begin
+        tmp <= 4'b0000; // 清除暫存器
+    end else if (Ldn) begin
+        tmp <= {D3, D2, D1, D0}; // 並接輸入載入暫存器
+    end
+end
+
+always @(*) begin
+    case ({Ldn, Sh})
+        2'b11: begin // 輸出D3~D0，多工器輸入D3~D0接載入資料(載入)
+            Q3 = tmp[3];
+            Q2 = tmp[2];
+            Q1 = tmp[1];
+            Q0 = tmp[0];
+        end
+        2'b10: begin // 輸出D3~D0，多工器輸入D3~D0接載入資料(載入)
+            Q3 = tmp[3];
+            Q2 = tmp[2];
+            Q1 = tmp[1];
+            Q0 = tmp[0];
+        end
+        2'b01: begin // 輸出Di,Q3~Q1，Di,Q3~Q1接前級輸出(移位)
+            Q3 = Di;
+            Q2 = tmp[2];
+            Q1 = tmp[1];
+            Q0 = tmp[0];
+        end
+        default: begin // 輸出Q3~Q0，Q3~Q0接輸出回授(不變)
+            Q3 = tmp[3];
+            Q2 = tmp[2];
+            Q1 = tmp[1];
+            Q0 = tmp[0];
+        end
+    endcase
+end
+
+endmodule

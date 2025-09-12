@@ -1,0 +1,34 @@
+module counter6(
+input clk,
+input clrn,
+input load,
+input [2:0] D,
+input en,
+output Co,
+output reg[2:0]Q
+);
+
+always@(posedge clk)
+		begin 
+		if(clrn == 1)
+			begin 
+			Q = 0;
+			end
+		else if(load == 1)
+			begin 
+			Q = D;
+			end 
+		else if(en == 0)
+			begin
+			Q = Q;
+			end
+		else if(en == 1)
+			begin 
+			if(Q == 5)
+				Q = 0;
+			else
+				Q = Q + 1;
+			end 
+		end
+		assign Co = Q[2] & Q[0] & en;
+ endmodule 

@@ -1,0 +1,25 @@
+Library IEEE;
+Use IEEE.std_logic_1164.all;
+Entity JKFF is
+	Port(J, K, CL, PR, CLK:in STD_LOGIC;
+		 Q,Qbar:out STD_LOGIC);
+End JKFF;
+Architecture Behavioral of JKFF is 
+signal Q_int:std_logic; 
+Begin
+	Process(CLK,PR,CL) 
+	
+	Begin
+		If PR='0' Then Q_int <= '1';
+		Elsif CL='0' Then Q_int <= '0';
+		Elsif Rising_edge(CLK) Then
+			If J = '0' and K = '1' Then Q_int <= '0';
+			Elsif J = '1'and K = '0'Then Q_int <= '1';
+			Elsif J = '1'and K = '1'Then Q_int <= not Q_int;
+			Else null; 
+			End If;
+		End If; 
+		Q <= Q_int;
+		Qbar <= not Q_int;
+	End Process; 
+End Behavioral;

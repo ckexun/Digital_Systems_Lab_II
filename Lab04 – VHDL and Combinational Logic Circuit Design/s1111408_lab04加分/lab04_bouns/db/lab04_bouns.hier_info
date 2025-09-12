@@ -1,0 +1,22 @@
+|lab04_bouns
+A[7] => Y~2.IN1
+A[7] => Y~6.IN1
+A[7] => Y~10.IN1
+A[6] => Y~5.IN1
+A[6] => Y~9.IN1
+A[5] => Y~1.IN1
+A[5] => Y~8.IN0
+A[4] => Y~8.IN1
+A[3] => Y~0.IN0
+A[3] => Y~4.IN0
+A[2] => Y~4.IN1
+A[1] => Y~0.IN1
+A[0] => ~NO_FANOUT~
+EN => Y~3.IN1
+EN => Y~7.IN1
+EN => Y~11.IN1
+Y[2] <= Y~11.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y~7.DB_MAX_OUTPUT_PORT_TYPE
+Y[0] <= Y~3.DB_MAX_OUTPUT_PORT_TYPE
+
+

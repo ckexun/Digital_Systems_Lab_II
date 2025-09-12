@@ -1,0 +1,37 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity pwm_controller is
+    Port ( clk : in STD_LOGIC;
+           enable : in STD_LOGIC;
+           duty : in unsigned(2 downto 0);
+           led : out STD_LOGIC
+         );
+end pwm_controller;
+
+architecture Behavioral of pwm_controller is
+    signal counter : integer range 0 to 9 := 0; -- 10個時鐘週期為一個PWM周期
+    signal pwm_period : integer := 9; -- PWM周期為10個時鐘週期
+begin
+    process(clk)
+    begin
+        if rising_edge(clk) then
+            if enable = '1' then
+                if counter < pwm_period then
+                    counter <= counter + 1;
+                    if counter < to_integer(unsigned(duty)) then
+                        led <= '1'; -- ON狀態
+                    else
+                        led <= '0'; -- OFF狀態
+                    end if;
+                else
+                    counter <= 0;
+                end if;
+            else
+                led <= '0'; -- 關閉LED
+            end if;
+        end if;
+    end process;
+end Behavioral;
