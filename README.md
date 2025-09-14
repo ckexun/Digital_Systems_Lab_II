@@ -25,6 +25,7 @@ Learn how to use hardware description languages (HDL) such as VHDL and Verilog t
 ---
 
 ## Project Structure
+```
 Digital_Systems_Lab_II/
 ├── Lab01/ # Combinational Circuit Design with Basic Logic Gates
 ├── Lab02/ # Combinational Logic Circuit Design
@@ -41,3 +42,4 @@ Digital_Systems_Lab_II/
 ├── Lab13/ # Multilevel Decoder
 ├── Lab14/ # Comparator
 └── Lab15/ # Traffic Light
+```
